@@ -9,18 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTask(task);
   });
 
-
-  console.log(tasksList.childNodes);
-  tasksList.childNodes.forEach((taskElement) => {
-    taskElement.addEventListener("click", function (event) {
-      if (event.target.tagName === "BUTTON") {
-        tasks = tasks.filter((task) => task.id != taskElement.id);
-        saveTasksLocalStorage();
-        taskElement.remove();
-      }
-    });
-  });
-
   addTaskButton.addEventListener("click", function () {
     taskText = taskInput.value.trim();
     if (taskText.length == 0) {
@@ -48,12 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
     taskElement.id = task.id;
 
     const taskTextDiv = document.createElement("div");
-    taskTextDiv.className = "px-2 py-1";
+    taskTextDiv.className = "px-2 py-1 cursor-pointer";
     taskTextDiv.textContent = task.text;
+    
 
     const deleteButton = document.createElement("button");
     deleteButton.className = "px-2 py-1 bg-red-700 rounded-lg";
     deleteButton.textContent = "Delete";
+
+    taskTextDiv.style.textDecoration = task.done ? "line-through" : "none";
+
+    taskTextDiv.addEventListener("click", function () {
+        task.done = !task.done;
+        taskTextDiv.style.textDecoration = task.done ? "line-through" : "none";
+        saveTasksLocalStorage();
+    });
 
     deleteButton.addEventListener("click", function () {
       tasks = tasks.filter((t) => t.id != task.id);
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     tasksList.appendChild(taskElement);
-
     
   }
 
