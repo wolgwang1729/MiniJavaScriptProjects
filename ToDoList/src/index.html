@@ -6,7 +6,22 @@
     <title>Document</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    <h1 class="underline">Hello</h1>
+<body class="bg-black text-white flex justify-center items-center h-screen">
+    <div id="container" class="bg-white bg-opacity-5 rounded-xl">
+        <h1 class="text-center m-2 p-3 font-bold">To-Do List</h1>
+        <div id="inputContainer" class="m-2 gap-2 flex justify-between">
+            <input type="text" id="input" class="flex-grow p-2 rounded-lg bg-white bg-opacity-10 outline-none" placeholder="Add a new task">
+            <button id="addTaskButton" class="p-2 bg-green-800 rounded-lg">Add Task</button>
+        </div>
+        <div class="mt-4 ">
+            <ul id="tasksList">
+                <li class="m-2 px-2 py-2 flex justify-between rounded-lg bg-white bg-opacity-10">
+                    <div class="px-2 py-1">Task1</div>
+                    <button class="px-2 py-1 bg-red-700 rounded-lg">Delete</button>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
