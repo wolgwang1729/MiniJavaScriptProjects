@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Github Card</title>
+</head>
+<body>
+    <div class="canvas">
+        <h1>Github Card Creator</h1>
+        <h2>Enter the Github username to create the Card</h2>
+        <form action="submit" id="userurl">
+            <input type="text" name="username" id="username" placeholder="Enter the Github username"> <br>
+            <button type="submit" id="submit">Create Card</button>
+        </form>
+
+        <div id="card">
+            <div id="card-header">
+                <img src="" alt="User Image" id="user-image">
+                <h2 id="user-name">User Name</h2>
+            </div>
+            <div id="card-body">
+                <div id="user-bio">
+                    <p id="bio">User Bio</p>
+                </div>
+                <div id="user-info">
+                    <div id="user-followers">
+                        <h3>Followers</h3>
+                        <p id="followers">0</p>
+                    </div>
+                    <div id="user-following">
+                        <h3>Following</h3>
+                        <p id="following">0</p>
+                    </div>
+                    <div id="user-repos">
+                        <h3>Repositories</h3>
+                        <p id="repos">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

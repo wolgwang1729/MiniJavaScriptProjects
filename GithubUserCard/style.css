@@ -1,0 +1,26 @@
+.canvas{
+    margin:100px auto 100px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+button{
+    margin: 7px;
+}
+
+#card{
+    border: solid 2px white;
+    margin: 40px auto;
+    width: 400px;
+    border-radius: 10px;
+    display: none;
+}
+
+#user-image{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}

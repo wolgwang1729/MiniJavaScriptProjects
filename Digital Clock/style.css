@@ -1,0 +1,19 @@
+.canvas{
+    margin:100px auto 100px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+#clock{
+    border: yellow 2px solid;
+    border-radius: 10px;
+    height: 25px;
+    width: 150px;
+    text-align: center;
+    margin: 10px auto 100px;
+    font-size: larger;
+}

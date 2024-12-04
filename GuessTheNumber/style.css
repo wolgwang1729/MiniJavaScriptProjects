@@ -1,0 +1,42 @@
+.canvas{
+    margin:100px auto 100px;
+    text-align: center;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.rules{
+    margin: 25px 50px 50px;
+    text-align: center;
+}
+#guessinputbox{
+    width: 75px;
+    font-size: xx-large;
+    text-align: center;
+}
+#btn{
+    margin: 10px 50px 20px;
+    font-weight: 600;
+}
+#endbtn{
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+}
+.result{
+    font-size: x-large;
+}
+
+p{
+    margin: 5px;
+}
+
+.prevparams{
+    border: solid 2px white;
+    margin: 10px 100px 20px;
+    border-radius: 10px;
+}
